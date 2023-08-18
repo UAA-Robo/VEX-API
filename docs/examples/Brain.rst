@@ -17,7 +17,6 @@ Setting the cursor does xxx
 Printing does xxx
 
 ..
-
     .. literalinclude:: ../../examples/basic_reads.py
         :pyobject: read_multiple
 
