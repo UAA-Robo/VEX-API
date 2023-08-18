@@ -1,3 +1,3 @@
-# Headline
+# VexCode API
 
-> An awesome project.
+This is UAA Robotic's documentation of the VexCode API
