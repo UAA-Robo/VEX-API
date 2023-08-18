@@ -32,7 +32,7 @@ Returns a double that represents the value of the timer.
 >  cout << TestBrain.timer(sec);
 >```
 
-
+<br><br>
 ### resetTimer
  ```clike
 vex::brain::resetTimer()
