@@ -2,9 +2,6 @@
 Basic Brain Examples
 ======================================
 
-Basic Reading
--------------
-
 Setting the cursor does xxx
 
 ..
