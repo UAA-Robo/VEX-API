@@ -1,6 +1,6 @@
 # brain<br>
 
-<b> Use the brain class to see battery information, SD card information, or write to the Screen. </b> <br>
+Use the brain class to see battery information, SD card information, or write to the Screen. <br> <br>
 
 
 **class constructors** <br>
