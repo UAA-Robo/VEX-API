@@ -11,12 +11,15 @@ Setting the cursor does xxx
     >>> set_cursor()
     Tag(tag='DINT1', value=20, type='DINT', error=None)
 
-Printing does xxx
 
+Printing does xxx
 
 ..
     .. literalinclude:: ../../examples/basic_reads.py
         :pyobject: read_multiple
+
+
+    Brain.Screen.print("User Program has Started.");
 
     >>> read_multiple()
     [Tag(tag='DINT1', value=20, type='DINT', error=None), Tag(tag='SINT1', value=5, type='SINT', error=None), Tag(tag='REAL1', value=100.0009994506836, type='REAL', error=None)]
