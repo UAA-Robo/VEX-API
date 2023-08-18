@@ -39,12 +39,32 @@ vex::brain::resetTimer()
 ```
 
 **Description** <br>
-Resets the timer to 0. <br>
-Returns void.
+Resets the timer to 0. 
 
 **Example** 
 >```clike
 >  TestBrain.resetTimer()
+>```
+
+<br><br>
+### setTimer
+ ```clike
+vex::brain::setTimer(double value, timeUnits units)
+```
+
+**Description** <br>
+Sets the timer to a value and time unit. 
+
+**Parameters** 
+
+| Name | Value | Description |
+| :--- | :---- | :---------- |
+| value | double | The value that the timer is set to. |
+| units | vex::timeUnits TODO:link | The unit of time that will be returned. |
+
+**Example** 
+>```clike
+>  TestBrain.setTimer(350, sec)
 >```
 ______________________________________________________________________________________________________________________________
 
