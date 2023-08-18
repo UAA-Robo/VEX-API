@@ -1,4 +1,4 @@
-# motor
+## motor
 
 ```clike
 vex::motor( int32_t index);
