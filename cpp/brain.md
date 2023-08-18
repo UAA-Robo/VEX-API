@@ -1,6 +1,6 @@
 # brain
 
-**class constructors**
+**class constructors**  
 Creates a new brain object.
 ```clike
 vex::brain::brain()
