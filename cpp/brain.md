@@ -29,7 +29,22 @@ Returns a double that represents the value of the timer.
 
 **Example** 
 >```clike
->  TODO example
+>  cout << TestBrain.timer(sec);
+>```
+
+
+### resetTimer
+ ```clike
+vex::brain::resetTimer()
+```
+
+**Description** <br>
+Resets the timer to 0. <br>
+Returns void.
+
+**Example** 
+>```clike
+>  TestBrain.resetTimer()
 >```
 ______________________________________________________________________________________________________________________________
 
