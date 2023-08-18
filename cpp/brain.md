@@ -1,6 +1,7 @@
 # brain<br>
 
 Use the brain class to see battery information, SD card information, or write to the Screen. <br> 
+Create a brain object: <br>
 <b> Example </b> <br>
 ```clike
 vex::brain TestBrain
