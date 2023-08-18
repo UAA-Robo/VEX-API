@@ -1,40 +1,31 @@
 # brain<br>
 
 Use the brain class to see battery information, SD card information, or write to the Screen. <br> 
-Create a brain object: <br>
+Start by creating an instance of the brain object.
+
 <b> Example </b> <br>
 ```clike
 vex::brain TestBrain
 ```
 
-**class constructors** <br>
-Creates a new brain object.
-```clike
-vex::brain::brain()
-```
-
-<b> Example </b> <br>
-```clike
-TODO
-```
-
 ______________________________________________________________________________________________________________________________
 
-## <u>Setting</u>
+## <u>Timer</u>
 
-### TODO method name
+### timer
  ```clike
-TODO full method
+vex::brain::timer(timeUnits units)
 ```
 
 **Description** <br>
-TODO description
+Gets the value of the timer in the units specified. <br>
+Returns a double that represents the value of the timer. 
 
 **Parameters** 
 
 | Name | Value | Description |
 | :--- | :---- | :---------- |
-| TODO | TODO | TODO |
+| units | vex::timeUnits TODO:link | The unit of time that will be returned. |
 
 **Example** 
 >```clike
