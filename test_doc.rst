@@ -11,4 +11,4 @@ This is a normal text paragraph. The next paragraph is a code sample::
 
 **BOLD TEXT!!!**
 
-~~*hello world!*~~
+~*hello world!*~
