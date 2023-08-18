@@ -37,7 +37,7 @@ Sets the motor mode to "reverse", which will make motor commands spin the motor 
 
 **Example** 
 >```clike
->  vex::motor my_motor(PORT1);
+>  vex::motor my_motor = vex::motor(PORT1); // Initialize my_motor at port 1
 >  my_motor.setReversed(true);
 >```
 ______________________________________________________________________________________________________________________________
