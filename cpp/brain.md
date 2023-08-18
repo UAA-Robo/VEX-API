@@ -1,18 +1,16 @@
 # brain<br>
 
-Use the brain class to see battery information, SD card information, or write to the Screen. <br> <br>
-
+Use the brain class to see battery information, SD card information, or write to the Screen. <br> 
+Example <br>
+```clike
+vex::brain TestBrain
+```
 
 **class constructors** <br>
 Creates a new brain object.
 ```clike
 vex::brain::brain()
 ```
-<b> Parameters </b> <br>
-
-| Name | Value | Description |
-| :--- | :---- | :---------- |
-| TODO | TODO | TODO |
 
 <b> Example </b> <br>
 ```clike
