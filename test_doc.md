@@ -1,11 +1,19 @@
 # This is a sample doc file
-## using headers
-### header 3
+## We'll use `brain.timer` as an example:
 
-**BOLD TEXT!!!**
+# vex::brain.timer
 
-*does this work?*
+  ## Function
+  *Returns:* double
 
+  ## Overloads
+  ```
+timer(timeUnits units)
 ```
-will this work as a codeblock?
-```
+  ### Description
+    Gets the value of the timer in the units specified.
+  *Parameters:*
+    **Name** | **Type**      | **Description**
+    ---------| ------------- | ------------
+    units    | vex::timeUnits| The unit of time that will be returned.
+      
