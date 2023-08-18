@@ -1,6 +1,8 @@
-# brain
+# brain<br>
+Use the brain class to see battery information, SD card information, or write to the Screen.<br><br>
 
-**class constructors**  
+
+**class constructors** <br>
 Creates a new brain object.
 ```clike
 vex::brain::brain()
