@@ -1,5 +1,7 @@
 # motor
 
+<b> Prototypes </b>
+
 ```clike
 vex::motor( int32_t index);
 vex::motor( int32_t index, bool reverse);
@@ -119,7 +121,7 @@ Sets the stopping mode of the motor by passing a brake mode as a parameter.
 >  my_motor.stop();  // Watch the robot slide!
 >```
 
-### resetPosition(void)
+### resetPosition
  ```clike
 void resetPosition();
 ```
@@ -136,7 +138,7 @@ Resets the motor's encoder to the value of zero.
 >  my_motor.resetPosition();  // Resets my_motor's encoder to the value of zero at the current motor position.
 >```
 
-### setPosition(double value, rotationUnits units);
+### setPosition;
  ```clike
 void setPosition(double value, rotationUnits units);
 ```
@@ -181,7 +183,37 @@ Sets the timeout for the motor. If the motor does not reach its' commanded posit
 
 **Example** 
 >```clike
->  TODO
+>  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
+>  my_motor.setTimeout(5, timeUnits::sec);  // Sets my_motor's timeout to 5 seconds
+>  
+>  my_motor.spinFor(directionType::fwd, 1.0, rotationUnits::rev, false);  // Spin for one rotation
+>  // If the motor does not finish its spin in 5 seconds, the motor will stop
+>  
+>```
+
+### setTimeout;
+ ```clike
+void setTimeout(int32_t time, timeUnits units);
+```
+
+**Description** <br>
+Sets the timeout for the motor. If the motor does not reach its' commanded position prior to the completion of the timeout, the motor will stop.
+
+**Parameters** 
+
+| Name | Value | Description |
+| :--- | :---- | :---------- |
+| value | double | Sets the amount of time. |
+| units | vex::timeUnits | The measurement unit for the time value. |
+
+**Example** 
+>```clike
+>  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
+>  my_motor.setTimeout(5, timeUnits::sec);  // Sets my_motor's timeout to 5 seconds
+>  
+>  my_motor.spinFor(directionType::fwd, 1.0, rotationUnits::rev, false);  // Spin for one rotation
+>  // If the motor does not finish its spin in 5 seconds, the motor will stop
+>  
 >```
 ______________________________________________________________________________________________________________________________
 
