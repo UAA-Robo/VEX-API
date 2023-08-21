@@ -3,7 +3,7 @@ Many VEX API functions take custom units as an argument. These are defined as fo
 
 ______________________________________________________________________________________________________________________________
 
-## <u>Motor Units</u>
+## <u>Motor-related Units</u>
 
 ### percentUnits
 `enum class percentUnits`
@@ -46,5 +46,5 @@ The measurement units for time values.
 >```
 ______________________________________________________________________________________________________________________________
 
-## <u>Brain/LCD Units</u>
+## <u>Brain/LCD-related Units</u>
 
