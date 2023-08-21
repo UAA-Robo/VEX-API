@@ -74,7 +74,7 @@ Sets the velocity of the motor based on the parameters set in the command. This 
 
 ### setBrake (Legacy)
  ```clike
-void setBrake(vex::brakeType mode);
+void setBrake(brakeType mode);
 ```
 
 **Description** <br>
@@ -178,7 +178,7 @@ Sets the timeout for the motor. If the motor does not reach its' commanded posit
 
 | Name | Value | Description |
 | :--- | :---- | :---------- |
-| value | double | Sets the amount of time. |
+| time | int32_t | Sets the amount of time. |
 | units | vex::timeUnits | The measurement unit for the time value. |
 
 **Example** 
