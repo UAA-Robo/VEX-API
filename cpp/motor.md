@@ -48,7 +48,8 @@ Sets the motor mode to "reverse", which will make motor commands spin the motor 
 >```
 
 ### setVelocity
-`void setVelocity(double velocity, velocityUnits units)`
+`void setVelocity(double velocity, velocityUnits units)` <br>
+`void setVelocity(double velocity, percentUnits units)`
 
 **Description** <br>
 Sets the velocity of the motor based on the parameters set in the command. This command will not run the motor. Any subsequent call that does not contain a specified motor velocity will use this value.
@@ -59,6 +60,7 @@ Sets the velocity of the motor based on the parameters set in the command. This 
 | :--- | :---- | :---------- |
 | velocity | double | Sets the amount of velocity. |
 | units | vex::velocityUnits | The measurement unit for the velocity value. |
+| units | [vex::percentUnits](cpp/units?id=percentunits) | The measurement unit for the velocity value. |
 
 **Example** 
 >```clike
@@ -117,9 +119,7 @@ Sets the stopping mode of the motor by passing a brake mode as a parameter.
 >```
 
 ### resetPosition
- ```clike
-void resetPosition();
-```
+`void resetPosition()`
 
 **Description** <br>
 Resets the motor's encoder to the value of zero.
@@ -196,22 +196,79 @@ Sets the max torque of the motor.
 | Name | Value | Description |
 | :--- | :---- | :---------- |
 | value | double | Sets the amount of torque. |
-| units | vex::percentUnits | The measurement unit for the torque value. |
+| units | [vex::percentUnits](cpp/units?id=percentunits) | The measurement unit for the torque value. |
 | units | vex::torqueUnits | The measurement unit for the torque value, |
 | units | vex::currentUnits | The measurement unit for the torque value. |
 
 **Example** 
 >```clike
->  vex::motor lift_motor = vex::motor(vex::PORT1);  // Initialize lift_motor at port 1
->  lift_motor.setMaxTorque(2.5, vex::currentUnits::amp); // Sets lift_motor's maximum torque to that calculated by a 2.5 amp current draw
+>  vex::motor my_lift_motor = vex::motor(vex::PORT1);  // Initialize my_lift_motor at port 1
+>  my_lift_motor.setMaxTorque(2.5, vex::currentUnits::amp); // Sets my_lift_motor's maximum torque to that calculated by a 2.5 amp current draw
 >  
->  lift_motor.spinFor(vex::directionType::fwd, 0.75, vex::rotationUnits::rev, false);
+>  my_lift_motor.spinFor(vex::directionType::fwd, 0.75, vex::rotationUnits::rev, false);
 >  
 >```
 ______________________________________________________________________________________________________________________________
 
 ## <u>Action</u>
 
+### spin
+`void spin(directionType dir)` <br>
+`void spin(directionType dir, double velocity, velocityUnits units)` <br>
+`void spin(directionType dir, double velocity, percentUnits units)`
+`void spin(directionType dir, double voltage, voltageUnits units)`
 
+**Description** <br>
+Turns on the motor and spins it in a specified direction and a specified velocity (if included).
+
+**Parameters** 
+
+| Name | Value | Description |
+| :--- | :---- | :---------- |
+| dir | vex::directionType | The direction to spin the motor. |
+| velocity | double | Sets the amount of velocity. |
+| voltage | double | Sets the amount of volts. |
+| units | vex::velocityUnits | The measurement unit for the velocity value. |
+| units | [vex::percentUnits](cpp/units?id=percentunits) | The measurement unit for the velocity value. |
+| units | vex::voltageUnits | The measurement unit for the voltage value. |
+
+**Example** 
+>```clike
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.setVelocity(50.0, vex::velocityUnits::pct); // Sets the default velocity of my_motor to 50%
+>  
+>  my_motor.spin(vex::directionType::fwd, 100.0, vex::velocityUnits::pct); // Spins my_motor at 100%
+>  vex::task::sleep(1000);
+>  my_motor.stop();
+>  
+>  my_motor.spin(vex::directionType::fwd); // Spins my_motor at default velocity of 50%
+>```
+
+
+### spinTo
+`bool spinTo(double rotation, rotationUnits units, bool waitForCompletion=true)` <br>
+`bool spinTo(double rotation, rotationUnits units, double velocity, velocityUnits units_v, bool waitForCompletion=true)`
+
+**Description** <br>
+Turns on the motor and spins it to an absolute target rotation value at a specified velocity (if included). <br>
+*Returns* a Boolean that signifies when the motor has reached the target rotation value.
+
+**Parameters** 
+
+| Name | Value | Description |
+| :--- | :---- | :---------- |
+| rotation | double | Sets the amount of rotation. |
+| units | vex::rotationUnits | The measurement unit for the rotation value. |
+| velocity | double | Sets the amount of velocity. |
+| units_v | vex::velocityUnits | The measurement unit for the velocity value. |
+| waitForCompletion | bool | (optional) If true, your program will wait until the motor reaches the target rotational value. If false, the program will continue after calling this function. By default, this parameter is true. |
+
+**Example** 
+>```clike
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.spinTo(120.0, vex::rotationUnits::deg, 10.0, vex::velocityUnits::pct, false); // Spins my_motor to the 120 degree position at 10% velocity
+>  // . . .
+>  // Code continues to run after function call
+>```
 ______________________________________________________________________________________________________________________________
 ## <u>Sensing</u>
