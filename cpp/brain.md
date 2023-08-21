@@ -44,6 +44,7 @@ Resets the timer to 0.
 **Example** 
 >```clike
 > vex::brain my_brain = vex::brain();
+> vex::task::sleep(3000);  // Wait for 3 seconds
 > my_brain.resetTimer();
 >```
 
@@ -63,7 +64,9 @@ Sets the timer to a value and time unit.
 
 **Example** 
 >```clike
->  TestBrain.setTimer(350, sec)
+> vex::brain my_brain = vex::brain();
+> vex::task::sleep(3000);  // Wait for 3 seconds
+> my_brain.setTimer(2, vex::timeUnits::sec);  //Set timer back to 2 seconds
 >```
 ______________________________________________________________________________________________________________________________
 

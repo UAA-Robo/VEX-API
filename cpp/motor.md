@@ -16,8 +16,8 @@
 <b> Example </b> <br>
 
 > ```clike
-> vex::motor left_motor = vex::motor(vex::PORT1);  // Initialize left_motor at port 1
-> vex::motor right_motor = vex::motor(vex::PORT2, true);  // Initialize right_motor at port 2 and sets the reverse flag to true
+> vex::motor my_left_motor = vex::motor(vex::PORT1);  // Initialize left_motor at port 1
+> vex::motor my_right_motor = vex::motor(vex::PORT2, true);  // Initialize right_motor at port 2 and sets the reverse flag to true
 > ```
 
 ______________________________________________________________________________________________________________________________
