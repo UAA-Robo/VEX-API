@@ -3,10 +3,10 @@
 <b> Prototypes </b>
 
 ```clike
-vex::motor( int32_t index);
-vex::motor( int32_t index, bool reverse);
-vex::motor( int32_t index, gearSetting gears);
-vex::motor( int32_t index, gearSetting gears, bool reverse);
+vex::motor(int32_t index);
+vex::motor(int32_t index, bool reverse);
+vex::motor(int32_t index, gearSetting gears);
+vex::motor(int32_t index, gearSetting gears, bool reverse);
 ```
 <b> Parameters </b> <br>
 
