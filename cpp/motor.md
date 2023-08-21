@@ -216,7 +216,7 @@ Sets the max torque of the motor.
 >  vex::motor lift_motor = vex::motor(PORT1);  // Initialize lift_motor at port 1
 >  lift_motor.setMaxTorque(2.5, currentUnits::amp); // Sets lift_motor's maximum torque to that calculated by a 2.5 amp current draw
 >  
->  my_motor.spinFor(directionType::fwd, 0.75, rotationUnits::rev, false);
+>  lift_motor.spinFor(directionType::fwd, 0.75, rotationUnits::rev, false);
 >  
 >```
 ______________________________________________________________________________________________________________________________
