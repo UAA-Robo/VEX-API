@@ -1,6 +1,5 @@
 # motor
 
-<b> Prototypes </b>
 `vex::motor( int32_t index)` <br>
 `vex::motor( int32_t index, bool reverse)` <br>
 `vex::motor( int32_t index, gearSetting gears)` <br>
