@@ -16,7 +16,7 @@ To add classes or methods to this repo, please follow the cpp/template.md format
 
 * Use **vex type descriptions** that are in the [VEXcode API](https://api.vexcode.cloud/v5/namespace/namespacevex). 
 
-* Keep **examples** simple and make sure to test them. Each example should be a fully functioning block of code that can be run in main as is (that means include every variable declaration). Use comments if you add specific parameters. Don't use `using namespace vex`. Variables should be in snake case and should start with `my_` (ex/ `my_motor`).
+* Keep **examples** simple and make sure to test them. Each example should be a fully functioning block of code that can be run in main as is (that means include every variable declaration). Use comments if you add specific parameters. Don't use `using namespace vex` or `using namespace std`. Variables should be in snake case and should start with `my_` (ex/ `my_motor`).
 
 <br>
 After you edit the md files, and push to the main branch, your changes will automatically be deployed to the documentation website.

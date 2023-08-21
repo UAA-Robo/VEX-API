@@ -14,10 +14,11 @@
 | gears | gearSetting | sets the gear's setting for the new motor object. |
 
 <b> Example </b> <br>
->```clike
->  vex::motor left_motor = vex::motor(PORT1);  // Initialize left_motor at port 1
->  vex::motor right_motor = vex::motor(PORT2, true);  // Initialize right_motor at port 2 and sets the reverse flag to true
->```
+
+> ```clike
+> vex::motor left_motor = vex::motor(vex::PORT1);  // Initialize left_motor at port 1
+> vex::motor right_motor = vex::motor(vex::PORT2, true);  // Initialize right_motor at port 2 and sets the reverse flag to true
+> ```
 
 ______________________________________________________________________________________________________________________________
 
@@ -37,8 +38,13 @@ Sets the motor mode to "reverse", which will make motor commands spin the motor 
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.setReversed(true);
+> vex::motor my_motor = vex::motor(vex::PORT1);
+> my_motor.setReversed(true); // Set the motor to spin in reverse
+> 
+> // Spins motor for 3 seconds
+> my_motor.spin(vex::directionType::fwd);  //Spinning forward will now be reversed
+> vex::task::sleep(3000);
+> my_motor.stop();
 >```
 
 ### setVelocity
@@ -56,12 +62,12 @@ Sets the velocity of the motor based on the parameters set in the command. This 
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.setVelocity(50.0, velocityUnits::pct);  // Sets my_motor's default velocity to 50%
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.setVelocity(50.0, vex::velocityUnits::pct);  // Sets my_motor's default velocity to 50%
 >  
 >  // Spins motor for 3 seconds
->  my_motor.spin(directionType::fwd);
->  task::sleep(3000);
+>  my_motor.spin(vex::directionType::fwd);
+>  vex::task::sleep(3000);
 >  my_motor.stop();
 >```
 
@@ -79,13 +85,13 @@ Sets the stopping mode of the motor by passing a brake mode as a parameter.
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
 >  my_motor.setStopping(coast);  // Sets my_motor's stopping mode to coast.
 >  
 >  // Spins motor for 3 seconds
->  my_motor.spin(directionType::fwd);
->  task::sleep(3000);
->  my_motor.stop();  // Watch the robot slide!
+>  my_motor.spin(vex::directionType::fwd);
+>  vex::task::sleep(3000);
+>  my_motor.stop();  // Watch the motor spin down!
 >```
 
 ### setStopping
@@ -102,11 +108,11 @@ Sets the stopping mode of the motor by passing a brake mode as a parameter.
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.setStopping(coast);  // Sets my_motor's stopping mode to coast.
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.setStopping(vex::coast);  // Sets my_motor's stopping mode to coast.
 >  // Spins motor for 3 seconds
->  my_motor.spin(directionType::fwd);
->  task::sleep(3000);
+>  my_motor.spin(vex::directionType::fwd);
+>  vex::task::sleep(3000);
 >  my_motor.stop();  // Watch the robot slide!
 >```
 
@@ -120,15 +126,15 @@ Resets the motor's encoder to the value of zero.
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.spin(directionType::fwd, 50.0, percentUnits::pct); // Spin the motor
->  task::sleep(1000);  // Spin for 1 second
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.spin(vex::directionType::fwd, 50.0, vex::percentUnits::pct); // Spin the motor
+>  vex::task::sleep(1000);  // Spin for 1 second
 >  my_motor.stop();
 >  my_motor.resetPosition();  // Resets my_motor's encoder to the value of zero at the current motor position.
 >```
 
 ### setPosition
-`void setPosition(double value, rotationUnits units);`
+`void setPosition(double value, rotationUnits units)`
 
 **Description** <br>
 Sets the value of the motor's encoder to the value specified in the parameter.
@@ -142,19 +148,19 @@ Sets the value of the motor's encoder to the value specified in the parameter.
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
 >  my_motor.setStopping(coast);  // Sets my_motor's stopping mode to coast.
 >  
 >  // Spins motor for 3 seconds
->  my_motor.spin(directionType::fwd);
->  task::sleep(3000);
+>  my_motor.spin(vex::directionType::fwd);
+>  vex::task::sleep(3000);
 >  my_motor.stop();
 >  
 >  my_motor.setPosition(120.0, rotationUnits::deg);  // Sets my_motor's encoder to the value of 120 degrees at the current motor position.
 >```
 
 ### setTimeout
-`clike void setTimeout(int32_t time, timeUnits units)`
+`void setTimeout(int32_t time, timeUnits units)`
 
 **Description** <br>
 Sets the timeout for the motor. If the motor does not reach its' commanded position prior to the completion of the timeout, the motor will stop.
@@ -168,21 +174,19 @@ Sets the timeout for the motor. If the motor does not reach its' commanded posit
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.setTimeout(5, timeUnits::sec);  // Sets my_motor's timeout to 5 seconds
+>  vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
+>  my_motor.setTimeout(5, vex::timeUnits::sec);  // Sets my_motor's timeout to 5 seconds
 >  
->  my_motor.spinFor(directionType::fwd, 1.0, rotationUnits::rev, false);  // Spin for one rotation
+>  my_motor.spinFor(vex::directionType::fwd, 1.0, vex::rotationUnits::rev, false);  // Spin for one rotation
 >  // If the motor does not finish its spin in 5 seconds, the motor will stop
 >  
 >```
 
 
 ### setMaxTorque
- ```clike
-void setMaxTorque(double value, percentUnits units);
-void setMaxTorque(double value, torqueUnits units);
-void setMaxTorque(double value, currentUnits units);
-```
+`void setMaxTorque(double value, percentUnits units)` <br>
+`void setMaxTorque(double value, torqueUnits units)` <br>
+`void setMaxTorque(double value, currentUnits units)` <br>
 
 **Description** <br>
 Sets the max torque of the motor.
@@ -198,10 +202,10 @@ Sets the max torque of the motor.
 
 **Example** 
 >```clike
->  vex::motor lift_motor = vex::motor(PORT1);  // Initialize lift_motor at port 1
->  lift_motor.setMaxTorque(2.5, currentUnits::amp); // Sets lift_motor's maximum torque to that calculated by a 2.5 amp current draw
+>  vex::motor lift_motor = vex::motor(vex::PORT1);  // Initialize lift_motor at port 1
+>  lift_motor.setMaxTorque(2.5, vex::currentUnits::amp); // Sets lift_motor's maximum torque to that calculated by a 2.5 amp current draw
 >  
->  lift_motor.spinFor(directionType::fwd, 0.75, rotationUnits::rev, false);
+>  lift_motor.spinFor(vex::directionType::fwd, 0.75, vex::rotationUnits::rev, false);
 >  
 >```
 ______________________________________________________________________________________________________________________________
