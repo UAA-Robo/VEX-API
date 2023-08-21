@@ -170,7 +170,7 @@ Sets the timeout for the motor. If the motor does not reach its' commanded posit
 | Name | Value | Description |
 | :--- | :---- | :---------- |
 | time | int32_t | Sets the amount of time. |
-| units | vex::timeUnits | The measurement unit for the time value. |
+| units | [vex::timeUnits](cpp/units?id=timeunits) | The measurement unit for the time value. |
 
 **Example** 
 >```clike
