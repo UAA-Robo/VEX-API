@@ -7,18 +7,19 @@ will open this documentation up for other teams to contribute.
 <br> <br>
 
 **Setup.** 
-To edit, install docsify-cli to preview the website pages locally using `npm i docsify-cli -g`. Once installed, clone the [github repo](https://github.com/UAA-Robo/VEX-API). Then in that directory run `docsify serve` to preview the site locally in your browser.
+To edit, install docsify-cli to preview the website pages locally using `npm i docsify-cli -g` (if you don't have npm, you can download it through [node.js](https://nodejs.org/en/download)). Once installed, clone the [github repo](https://github.com/UAA-Robo/VEX-API). Then in that directory run `docsify serve` to preview the site locally in your browser.
 <br> <br>
 
 **Formatting.**
-To add classes or functions to this repo, please follow the cpp/template.md format.
-Please use function and parameter descriptions from the actual comments in the vexCode code (as viewed in VSCode with the VEX extension). Use vex type descriptions that are in the [VEXcode API](https://api.vexcode.cloud/v5/namespace/namespacevex). 
+To add classes or methods to this repo, please follow the cpp/template.md format.
+* Please use **method and parameter** descriptions from the actual comments in the vexCode code (as viewed in VSCode with the VEX extension). Group methods by either `Setting`, `Action`, or `Sensing`, similar to [this outdated documentation](https://help.vexcodingstudio.com/index.html).
 
-Keep examples simple. Use comments if you add specific parameters. Don't use `using namespace vex`.
-Make sure examples run before adding them.
-<br> <br>
-After you edit the md files on github, and push to the main branch, your changes
-will automatically be deployed to the documentation website.
+* Use **vex type descriptions** that are in the [VEXcode API](https://api.vexcode.cloud/v5/namespace/namespacevex). 
+
+* Keep **examples** simple and make sure to test them. Each example should be a fully functioning block of code that can be run in main as is (that means include every variable declaration). Use comments if you add specific parameters. Don't use `using namespace vex`. Variables should be in snake case and should start with `my_` (ex/ `my_motor`).
+
+<br>
+After you edit the md files, and push to the main branch, your changes will automatically be deployed to the documentation website.
 
 
 ### Documentation for the Documentation
