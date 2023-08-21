@@ -1,5 +1,5 @@
 # VexCode API
-This is UAA Robotic's documentation of the VexCode API! It's a work in progress.
+[This](https://uaa-robo.github.io/VEX-API) is UAA Iceberg Robotics' documentation of the VexCode API! It's a work in progress.
 
 ### Contributing
 Currently, contribution is only open to UAA Robotics members. However, soon we 
