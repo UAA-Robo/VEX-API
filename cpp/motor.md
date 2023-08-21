@@ -138,7 +138,7 @@ Resets the motor's encoder to the value of zero.
 >  my_motor.resetPosition();  // Resets my_motor's encoder to the value of zero at the current motor position.
 >```
 
-### setPosition;
+### setPosition
  ```clike
 void setPosition(double value, rotationUnits units);
 ```
@@ -166,7 +166,7 @@ Sets the value of the motor's encoder to the value specified in the parameter.
 >  my_motor.setPosition(120.0, rotationUnits::deg);  // Sets my_motor's encoder to the value of 120 degrees at the current motor position.
 >```
 
-### setTimeout;
+### setTimeout
  ```clike
 void setTimeout(int32_t time, timeUnits units);
 ```
@@ -191,28 +191,32 @@ Sets the timeout for the motor. If the motor does not reach its' commanded posit
 >  
 >```
 
-### setTimeout;
+
+### setMaxTorque
  ```clike
-void setTimeout(int32_t time, timeUnits units);
+void setMaxTorque(double value, percentUnits units);
+void setMaxTorque(double value, torqueUnits units);
+void setMaxTorque(double value, currentUnits units);
 ```
 
 **Description** <br>
-Sets the timeout for the motor. If the motor does not reach its' commanded position prior to the completion of the timeout, the motor will stop.
+Sets the max torque of the motor.
 
 **Parameters** 
 
 | Name | Value | Description |
 | :--- | :---- | :---------- |
-| value | double | Sets the amount of time. |
-| units | vex::timeUnits | The measurement unit for the time value. |
+| value | double | Sets the amount of torque. |
+| units | vex::percentUnits | The measurement unit for the torque value. |
+| units | vex::torqueUnits | The measurement unit for the torque value, |
+| units | vex::currentUnits | The measurement unit for the torque value. |
 
 **Example** 
 >```clike
->  vex::motor my_motor = vex::motor(PORT1);  // Initialize my_motor at port 1
->  my_motor.setTimeout(5, timeUnits::sec);  // Sets my_motor's timeout to 5 seconds
+>  vex::motor lift_motor = vex::motor(PORT1);  // Initialize lift_motor at port 1
+>  lift_motor.setMaxTorque(2.5, currentUnits::amp); // Sets lift_motor's maximum torque to that calculated by a 2.5 amp current draw
 >  
->  my_motor.spinFor(directionType::fwd, 1.0, rotationUnits::rev, false);  // Spin for one rotation
->  // If the motor does not finish its spin in 5 seconds, the motor will stop
+>  my_motor.spinFor(directionType::fwd, 0.75, rotationUnits::rev, false);
 >  
 >```
 ______________________________________________________________________________________________________________________________
