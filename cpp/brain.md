@@ -1,56 +1,55 @@
 # brain<br>
+Use the brain class to see battery information, SD card information, or write to the Screen. <br>
 
-Use the brain class to see battery information, SD card information, or write to the Screen. <br> 
-Start by creating an instance of the brain object.
+`vex::brain()`
 
 <b> Example </b> <br>
-```clike
-vex::brain TestBrain
-```
+> ```clike
+> vex::brain my_brain = vex::brain();
+> ```
 
-______________________________________________________________________________________________________________________________
-
-## <u>Timer</u>
+______________________________________________________________________________________________________________________________________
+## <u>Sensing</u> `
 
 ### timer
- ```clike
-vex::brain::timer(timeUnits units)
-```
+
+`vex::timer(timeUnits units)`
 
 **Description** <br>
-Gets the value of the timer in the units specified. <br>
-Returns a double that represents the value of the timer. 
+Gets the value of the timer in the units specified. *Returns* a double that represents the value of the timer. 
 
-**Parameters** 
+**Parameters**
 
 | Name | Value | Description |
 | :--- | :---- | :---------- |
 | units | vex::timeUnits TODO:link | The unit of time that will be returned. |
 
+
 **Example** 
->```clike
->  cout << TestBrain.timer(sec);
->```
+> ```clike
+> vex::brain my_brain = vex::brain();
+> my_brain.timer(vex::timeUnits::sec);  //Gets time in seconds
+> ```
 
 <br><br>
+______________________________________________________________________________________________________________________________________
+
+## <u>Setting</u> 
 ### resetTimer
- ```clike
-vex::brain::resetTimer()
-```
+`vex::brain::resetTimer()`
 
 **Description** <br>
 Resets the timer to 0. 
 
 **Example** 
 >```clike
->  TestBrain.resetTimer()
+> vex::brain my_brain = vex::brain();
+> my_brain.resetTimer();
 >```
 
 <br><br>
 ### setTimer
- ```clike
-vex::brain::setTimer(double value, timeUnits units)
-```
+`vex::brain::setTimer(double value, timeUnits units)`
 
 **Description** <br>
 Sets the timer to a value and time unit. 
@@ -71,9 +70,8 @@ ________________________________________________________________________________
 ## <u>Action</u>
 
 ### TODO method name
- ```clike
-TODO full method
-```
+`TODO full method`
+
 
 **Description** <br>
 TODO description
@@ -89,24 +87,3 @@ TODO description
 >  TODO example
 >```
 
-______________________________________________________________________________________________________________________________
-## <u>Sensing</u>
-
-### TODO method name
- ```clike
-TODO full method
-```
-
-**Description** <br>
-TODO description
-
-**Parameters** 
-
-| Name | Value | Description |
-| :--- | :---- | :---------- |
-| TODO | TODO | TODO |
-
-**Example** 
->```clike
->  TODO example
->```

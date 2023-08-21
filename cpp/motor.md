@@ -1,11 +1,9 @@
 # motor
+`vex::motor( int32_t index)` <br>
+`vex::motor( int32_t index, bool reverse)` <br>
+`vex::motor( int32_t index, gearSetting gears)` <br>
+`vex::motor( int32_t index, gearSetting gears, bool reverse)` <br>
 
-```clike
-vex::motor( int32_t index);
-vex::motor( int32_t index, bool reverse);
-vex::motor( int32_t index, gearSetting gears);
-vex::motor( int32_t index, gearSetting gears, bool reverse);
-```
 <b> Parameters </b> <br>
 
 | Name | Value | Description |
@@ -25,9 +23,7 @@ ________________________________________________________________________________
 ## <u>Setting</u>
 
 ### setReversed
- ```clike
-void setReversed(bool value);
-```
+`void setReversed(bool value)`
 
 **Description** <br>
 Sets the motor mode to "reverse", which will make motor commands spin the motor in the opposite direction.
@@ -45,9 +41,7 @@ Sets the motor mode to "reverse", which will make motor commands spin the motor 
 >```
 
 ### setVelocity
- ```clike
-void setVelocity(double velocity, velocityUnits units);
-```
+`void setVelocity(double velocity, velocityUnits units)`
 
 **Description** <br>
 Sets the velocity of the motor based on the parameters set in the command. This command will not run the motor. Any subsequent call that does not contain a specified motor velocity will use this value.
@@ -71,9 +65,7 @@ Sets the velocity of the motor based on the parameters set in the command. This 
 >```
 
 ### setBrake (Legacy)
- ```clike
-void setBrake(vex::brakeType mode);
-```
+`void setBrake(vex::brakeType mode)`
 
 **Description** <br>
 Sets the stopping mode of the motor by passing a brake mode as a parameter.
@@ -96,9 +88,7 @@ Sets the stopping mode of the motor by passing a brake mode as a parameter.
 >```
 
 ### setStopping
- ```clike
-void setStopping(brakeType mode);
-```
+`void setStopping(brakeType mode)`
 
 **Description** <br>
 Sets the stopping mode of the motor by passing a brake mode as a parameter.
@@ -137,9 +127,7 @@ Resets the motor's encoder to the value of zero.
 >```
 
 ### setPosition(double value, rotationUnits units);
- ```clike
-void setPosition(double value, rotationUnits units);
-```
+`void setPosition(double value, rotationUnits units);`
 
 **Description** <br>
 Sets the value of the motor's encoder to the value specified in the parameter.
@@ -165,9 +153,7 @@ Sets the value of the motor's encoder to the value specified in the parameter.
 >```
 
 ### setTimeout;
- ```clike
-void setTimeout(int32_t time, timeUnits units);
-```
+`clike void setTimeout(int32_t time, timeUnits units)`
 
 **Description** <br>
 Sets the timeout for the motor. If the motor does not reach its' commanded position prior to the completion of the timeout, the motor will stop.

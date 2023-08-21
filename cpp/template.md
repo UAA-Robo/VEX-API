@@ -1,8 +1,8 @@
 # TODO class name
+TODO Brief description
 
-```clike
-TODO constructors
-```
+`TODO prototypes`
+
 <b> Parameters </b> <br>
 
 | Name | Value | Description |
@@ -19,12 +19,11 @@ ________________________________________________________________________________
 ## <u>Setting</u>
 
 ### TODO method name
- ```clike
-TODO full method
-```
+`TODO prototype`
 
 **Description** <br>
 TODO description
+*Returns* TODO
 
 **Parameters** 
 
@@ -41,12 +40,11 @@ ________________________________________________________________________________
 ## <u>Action</u>
 
 ### TODO method name
- ```clike
-TODO full method
-```
+`TODO prototype`
 
 **Description** <br>
 TODO description
+*Returns* TODO
 
 **Parameters** 
 
@@ -58,17 +56,15 @@ TODO description
 >```clike
 >  TODO example
 >```
-
 ______________________________________________________________________________________________________________________________
 ## <u>Sensing</u>
 
 ### TODO method name
- ```clike
-TODO full method
-```
+`TODO prototype`
 
 **Description** <br>
 TODO description
+*Returns* TODO
 
 **Parameters** 
 
