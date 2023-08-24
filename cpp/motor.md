@@ -244,9 +244,12 @@ Turns on the motor and spins it in a specified direction and a specified velocit
 >```
 
 
-### spinTo
+### spinTo / spinToPosition
 `bool spinTo(double rotation, rotationUnits units, bool waitForCompletion=true)` <br>
-`bool spinTo(double rotation, rotationUnits units, double velocity, velocityUnits units_v, bool waitForCompletion=true)`
+`bool spinTo(double rotation, rotationUnits units, double velocity, velocityUnits units_v, bool waitForCompletion=true)` <br> <br>
+
+`bool spinToPosition(double rotation, rotationUnits units, bool waitForCompletion=true)` <br>
+`bool spinToPosition(double rotation, rotationUnits units, double velocity, velocityUnits units_v, bool waitForCompletion=true)`
 
 **Description** <br>
 Turns on the motor and spins it to an absolute target rotation value at a specified velocity (if included). <br>
