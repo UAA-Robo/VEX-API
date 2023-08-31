@@ -17,7 +17,7 @@ Use the instances of the button class within the controller class to get input f
 ______________________________________________________________________________________________________________________________
 
 ### pressed
-`void pressed( void (*callback)(void)) const;`
+`void pressed( void (*callback)(void))`
 
 **Description** <br>
 Sets the function to be called when the button is pressed.
@@ -35,7 +35,7 @@ Sets the function to be called when the button is pressed.
 ______________________________________________________________________________________________________________________________
 
 ### released
-`void released(void (*callback)(void)) const;`
+`void released(void (*callback)(void))`
 
 **Description** <br>
 Sets the function to be called when the button is released.
@@ -54,7 +54,7 @@ TODO example
 ______________________________________________________________________________________________________________________________
 
 ### pressing
-`bool pressing(void) const;`
+`bool pressing(void)`
 
 **Description** <br>
 Gets the status of a button.
