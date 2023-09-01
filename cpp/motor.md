@@ -423,36 +423,10 @@ if (my_motor.velocity(vex::velocityUnits::pct) != 50.0) {
 
 ### current
 `double current(currentUnits units = currentUnits::amp)` <br>
-`double position(percentUnits units)`
+`double current(percentUnits units)`
 
 **Description** <br>
-Gets the electrical voltage of the motor in percentage of maximum (if specified) <br>
-*Returns* a double that represents the electrical current of the motor in the units defined in the parameter or as percentage of max current.
-
-**Parameters** 
-
-| Name | Value | Description |
-| :--- | :---- | :---------- |
-| units | [vex::currentUnits](cpp/units?id=currentunits) | The measurement unit for the current, defaults to vex::currentUnits::amp. |
-| units | [vex::percentUnits](cpp/units?id=percentunits) | The measurement unit for the current. |
-
-**Example** 
-```clike
-vex::motor my_motor = vex::motor(vex::PORT1);  // Initialize my_motor at port 1
-my_motor.setVelocity(100.0, vex::velocityUnits::pct);  // Sets the default velocity of my_motor
-my_motor.spin(vex::directionType::fwd);  // Spins my_motor at default velocity
-
-
-double my_current = my_motor.current();  // Gets the electrical current of my_motor in amps
-```
-
-
-### current
-`double current(currentUnits units = currentUnits::amp)` <br>
-`double position(percentUnits units)`
-
-**Description** <br>
-Gets the electrical voltage of the motor in percentage of maximum (if specified). <br>
+Gets the electrical current of the motor in percentage of maximum (if specified) <br>
 *Returns* a double that represents the electrical current of the motor in the units defined in the parameter or as percentage of max current.
 
 **Parameters** 
