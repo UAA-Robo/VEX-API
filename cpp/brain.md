@@ -4,13 +4,11 @@ Use the brain class to see battery information, SD card information, or write to
 `vex::brain()`
 
 <b> Example </b> <br>
-> ```clike
-> vex::brain my_brain = vex::brain();
-> ```
+```clike
+vex::brain my_brain = vex::brain();
+```
 
 ______________________________________________________________________________________________________________________________________
-## <u>Sensing</u> `
-
 ### timer
 
 `vex::timer(timeUnits units)`
@@ -26,15 +24,12 @@ Gets the value of the timer in the units specified. *Returns* a double that repr
 
 
 **Example** 
-> ```clike
-> vex::brain my_brain = vex::brain();
-> my_brain.timer(vex::timeUnits::sec);  //Gets time in seconds
-> ```
-
-<br><br>
+```clike
+vex::brain my_brain = vex::brain();
+my_brain.timer(vex::timeUnits::sec);  //Gets time in seconds
+```
 ______________________________________________________________________________________________________________________________________
 
-## <u>Setting</u> 
 ### resetTimer
 `vex::brain::resetTimer()`
 
@@ -42,13 +37,13 @@ ________________________________________________________________________________
 Resets the timer to 0. 
 
 **Example** 
->```clike
-> vex::brain my_brain = vex::brain();
-> vex::task::sleep(3000);  // Wait for 3 seconds
-> my_brain.resetTimer();
->```
+```clike
+vex::brain my_brain = vex::brain();
+vex::task::sleep(3000);  // Wait for 3 seconds
+my_brain.resetTimer();
+```
+______________________________________________________________________________________________________________________________________
 
-<br><br>
 ### setTimer
 `vex::brain::setTimer(double value, timeUnits units)`
 
@@ -63,30 +58,12 @@ Sets the timer to a value and time unit.
 | units | vex::timeUnits TODO:link | The unit of time that will be returned. |
 
 **Example** 
->```clike
-> vex::brain my_brain = vex::brain();
-> vex::task::sleep(3000);  // Wait for 3 seconds
-> my_brain.setTimer(2, vex::timeUnits::sec);  //Set timer back to 2 seconds
->```
+```clike
+vex::brain my_brain = vex::brain();
+vex::task::sleep(3000);  // Wait for 3 seconds
+my_brain.setTimer(2, vex::timeUnits::sec);  //Set timer back to 2 seconds
+```
 ______________________________________________________________________________________________________________________________
 
-## <u>Action</u>
 
-### TODO method name
-`TODO full method`
-
-
-**Description** <br>
-TODO description
-
-**Parameters** 
-
-| Name | Value | Description |
-| :--- | :---- | :---------- |
-| TODO | TODO | TODO |
-
-**Example** 
->```clike
->  TODO example
->```
-
+## TODO: Other methods
