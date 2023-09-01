@@ -30,7 +30,23 @@ Sets the function to be called when the button is pressed.
 
 **Example** 
 ```clike
-  TODO example
+vex::controller my_controller = vex::controller();
+int times_pressed = 0;
+
+// Prints the number of times button A was pressed since the program started
+void print_times_pressed() {    
+    my_controller.Screen.setCursor(1,1);
+    my_controller.Screen.clearLine();
+    times_pressed += 1;
+    
+    // For example, prints "A pressed 1 time(s)"
+    my_controller.Screen.print("A pressed %d time(s)", times_pressed);  
+}
+
+int main() {
+    // Calls the print_times_pressed function when Button A is pressed
+    my_controller.ButtonA.pressed(print_times_pressed);  
+}
 ```
 ______________________________________________________________________________________________________________________________
 
@@ -60,7 +76,6 @@ ________________________________________________________________________________
 **Description** <br>
 Sets the function to be called when the button is released.
 
-
 **Parameters** 
 
 | Name | Value | Description |
@@ -69,6 +84,22 @@ Sets the function to be called when the button is released.
 
 **Example** 
 ```clike
-TODO example
+vex::controller my_controller = vex::controller();
+int times_released = 0;
+
+// Prints the number of times button A was released since the program started
+void print_times_released() {    
+    my_controller.Screen.setCursor(1,1);
+    my_controller.Screen.clearLine();
+    times_released += 1;
+    
+    // For example, prints "A released 1 time(s)"
+    my_controller.Screen.print("A released %d time(s)", times_released);  
+}
+
+int main() {
+    // Calls the print_times_released function when Button A is released
+    my_controller.ButtonA.released(print_times_released);  
+}
 ```
 

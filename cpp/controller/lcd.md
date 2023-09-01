@@ -40,7 +40,7 @@ my_controller.Screen.clearScreen();
 ______________________________________________________________________________________________________________________________
 
 ### column
-`int32_t  column()`
+`int32_t column()`
 
 **Description** <br>
 An integer that tracks the current cursor position's column, starting at 1.
@@ -48,7 +48,17 @@ An integer that tracks the current cursor position's column, starting at 1.
 
 **Example** 
 ```clike
-  TODO example
+vex::controller my_controller = vex::controller();
+my_controller.Screen.setCursor(1,1);
+my_controller.Screen.print("Hello");
+
+// Gets the current curser column and increments it
+int curser_column = my_controller.Screen.column();
+curser_column += 1;
+
+// Sets the cursor to the incremented column so "World!" prints 1 space after "Hello"
+my_controller.Screen.setCursor(1, curser_column);
+my_controller.Screen.print("World!");
 ```
 
 ______________________________________________________________________________________________________________________________
@@ -104,7 +114,7 @@ my_controller.Screen.print("one, 2, %d, %.1f", three, four);  // Prints "One, 2,
 ______________________________________________________________________________________________________________________________
 
 ### row
-`int32_t  row()`
+`int32_t row()`
 
 **Description** <br>
 An integer that tracks the current cursor position's row, starting at 1.
@@ -112,7 +122,18 @@ An integer that tracks the current cursor position's row, starting at 1.
 
 **Example** 
 ```clike
-  TODO example
+vex::controller my_controller = vex::controller();
+my_controller.Screen.clearScreen();
+my_controller.Screen.setCursor(1,1);
+my_controller.Screen.print("Hello");
+
+// Gets the current curser row and increments it
+int curser_row = my_controller.Screen.row();
+curser_row += 1;
+
+// Sets the cursor to the incremented row so "World!" prints on the next line
+my_controller.Screen.setCursor(curser_row, 1);
+my_controller.Screen.print("World!");
 ```
 ______________________________________________________________________________________________________________________________
 
@@ -132,5 +153,8 @@ Sets the cursor to the row and column number set in the parameters.
 
 **Example** 
 ```clike
-  TODO example
+vex::controller my_controller = vex::controller();
+my_controller.Screen.clearScreen();
+my_controller.Screen.setCursor(2,1); // Sets the cursor 
+my_controller.Screen.print("Hello World");  // Prints "Hello World" on the Middle Line
 ```
