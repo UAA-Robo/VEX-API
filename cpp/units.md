@@ -312,3 +312,16 @@ The defined units for vexlink types.
 | vex::linkType::manager | A vexlink type that is defined as the manager radio. |
 | vex::linkType::worker | A vexlink type that is defined as the worker radio. |
 | vex::linkType::raw | A vexlink type that is defined as a raw unmanaged link. |
+
+
+## Controller-related types
+
+### button (child class of controller)
+The defined buttons for use on the VEX V5 Controller
+
+| Class | Description |
+| :--- | :---------- |
+| ButtonL1 | |
+| vex::linkType::manager | A vexlink type that is defined as the manager radio. |
+| vex::linkType::worker | A vexlink type that is defined as the worker radio. |
+| vex::linkType::raw | A vexlink type that is defined as a raw unmanaged link. |

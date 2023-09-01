@@ -22,8 +22,6 @@ vex::motor my_right_motor = vex::motor(vex::PORT2, true);  // Initialize my_righ
 
 ______________________________________________________________________________________________________________________________
 
-## <u>Setting</u>
-
 ### setReversed
 `void setReversed(bool value)`
 
@@ -208,7 +206,6 @@ my_lift_motor.spinFor(vex::directionType::fwd, 0.75, vex::rotationUnits::rev, fa
 ```
 ______________________________________________________________________________________________________________________________
 
-## <u>Action</u>
 
 ### spin
 `void spin(directionType dir)` <br>
@@ -314,7 +311,7 @@ my_motor.spin(vex::directionType::fwd, 50.0, vex::velocityUnits::pct);  // Spins
 my_motor.stop();  // Stops my_motor
 ```
 ______________________________________________________________________________________________________________________________
-## <u>Sensing</u>
+
 
 ### isSpinning
 `bool isSpinning()`
