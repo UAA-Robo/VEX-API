@@ -62,6 +62,7 @@ Gets the status of a button.
 
 **Example** 
 ```clike
+vex::controller my_controller = vex::controller();  // Initialize a controller
 while(true) {
     if (my_controller.ButtonA.pressing()) {
         my_controller.Screen.clearScreen();
