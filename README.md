@@ -12,7 +12,7 @@ To edit, install docsify-cli to preview the website pages locally using `npm i d
 
 **Formatting.**
 To add classes or methods to this repo, please follow the cpp/template.md format.
-* Please use **method and parameter** descriptions from the actual comments in the vexCode code (as viewed in VSCode with the VEX extension). Group methods by either `Setting`, `Action`, or `Sensing`, similar to [this outdated documentation](https://help.vexcodingstudio.com/index.html).
+* Please use **method and parameter** descriptions from the actual comments in the vexCode code (as viewed in VSCode with the VEX extension). Methods should be alphabetized. Use [this outdated documentation](https://help.vexcodingstudio.com/index.html) as a loose reference for formatting.
 
 * Use **vex type descriptions** that are in the [VEXcode API](https://api.vexcode.cloud/v5/namespace/namespacevex). 
 
