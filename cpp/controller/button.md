@@ -34,25 +34,6 @@ Sets the function to be called when the button is pressed.
 ```
 ______________________________________________________________________________________________________________________________
 
-### released
-`void released(void (*callback)(void))`
-
-**Description** <br>
-Sets the function to be called when the button is released.
-
-
-**Parameters** 
-
-| Name | Value | Description |
-| :--- | :---- | :---------- |
-| callback | function | A reference to a function. |
-
-**Example** 
-```clike
-TODO example
-```
-______________________________________________________________________________________________________________________________
-
 ### pressing
 `bool pressing(void)`
 
@@ -71,3 +52,23 @@ while(true) {
     }
  }
 ```
+______________________________________________________________________________________________________________________________
+
+### released
+`void released(void (*callback)(void))`
+
+**Description** <br>
+Sets the function to be called when the button is released.
+
+
+**Parameters** 
+
+| Name | Value | Description |
+| :--- | :---- | :---------- |
+| callback | function | A reference to a function. |
+
+**Example** 
+```clike
+TODO example
+```
+

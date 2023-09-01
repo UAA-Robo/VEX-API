@@ -22,8 +22,6 @@
 
 ______________________________________________________________________________________________________________________________
 
-## <u>Setting</u>
-
 ### setReversed
 `void setReversed(bool value)`
 
@@ -209,7 +207,6 @@ Sets the max torque of the motor.
 >```
 ______________________________________________________________________________________________________________________________
 
-## <u>Action</u>
 
 ### spin
 `void spin(directionType dir)` <br>
@@ -273,4 +270,4 @@ Turns on the motor and spins it to an absolute target rotation value at a specif
 >  // Code continues to run after function call
 >```
 ______________________________________________________________________________________________________________________________
-## <u>Sensing</u>
+

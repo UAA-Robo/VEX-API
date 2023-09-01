@@ -23,21 +23,6 @@ Sets the function to be called when the joystick axis value changes.
 ```clike
   TODO example
 ```
-
-______________________________________________________________________________________________________________________________
-
-### value
-`int32_t  value(void)`
-
-**Description** <br>
-Gets the value of the joystick axis on a scale from -127 to 127.
-**Returns** an integer that represents the value of the joystick axis.
-
-**Example** 
-```clike
-TODO
-```
-
 ______________________________________________________________________________________________________________________________
 
 ### released
@@ -58,3 +43,17 @@ Gets the position of the joystick axis on a scale from -100 to 100.
 ```clike
 TODO example
 ```
+______________________________________________________________________________________________________________________________
+
+### value
+`int32_t  value(void)`
+
+**Description** <br>
+Gets the value of the joystick axis on a scale from -127 to 127.
+**Returns** an integer that represents the value of the joystick axis.
+
+**Example** 
+```clike
+TODO
+```
+

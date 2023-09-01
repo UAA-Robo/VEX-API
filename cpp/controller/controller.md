@@ -15,6 +15,26 @@ Use the controller class to use the buttons and joysticks, print to the LCD scre
 vex::controller my_primary_controller = vex::controller(vex::controllerType::primary);  // Initialize a primary controller
 vex::controller my_secondary_controller = vex::controller(vex::controllerType::partner);  // Initialize a secondary controller
 ```
+
+______________________________________________________________________________________________________________________________
+
+### installed
+`bool installed()`
+
+**Description** <br>
+*Returns* true if the controller is linked to the brain. Else returns false. TODO: check this!
+
+**Example** 
+```clike
+vex::controller my_controller = vex::controller();  // Initialize a controller
+// If the controller is connected, print "Controller is connected!" to the first line of the controller screen
+if (my_controller.installed()) {
+    my_controller.Screen.clearScreen();
+    my_controller.Screen.setCursor(1, 1);
+    my_controller.Screen.print("Controller is connected!");
+}
+```
+
 ______________________________________________________________________________________________________________________________
 
 ### rumble
@@ -33,23 +53,5 @@ Rumbles the controller by a pattern defined by the parameter. Dots equal short, 
 ```clike
 vex::controller my_controller = vex::controller();  // Initialize a controller
 my_controller.rumble("... -");  // Vibrate the controller 3 short times, then pause, then vibrate the controller 1 long time.
-```
-______________________________________________________________________________________________________________________________
-
-### installed
-`bool installed()`
-
-**Description** <br>
-*Returns* true if the controller is linked to the brain. Else returns false. TODO: check this!
-
-**Example** 
-```clike
-vex::controller my_controller = vex::controller();  // Initialize a controller
-// If the controller is connected, print "Controller is connected!" to the first line of the controller screen
-if (my_controller.installed()) {
-    my_controller.Screen.clearScreen();
-    my_controller.Screen.setCursor(1, 1);
-    my_controller.Screen.print("Controller is connected!");
-}
 ```
 
