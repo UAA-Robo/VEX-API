@@ -8,7 +8,7 @@ Use the brain class to see battery information, SD card information, or write to
 vex::brain my_brain = vex::brain();
 ```
 
-______________________________________________________________________________________________________________________________________
+___
 ### timer
 
 `vex::timer(timeUnits units)`
@@ -20,7 +20,7 @@ Gets the value of the timer in the units specified. *Returns* a double that repr
 
 | Name | Value | Description |
 | :--- | :---- | :---------- |
-| units | vex::timeUnits TODO:link | The unit of time that will be returned. |
+| units | [vex::timeUnits](cpp/units?id=timeunits) | The unit of time that will be returned. |
 
 
 **Example** 
@@ -28,7 +28,7 @@ Gets the value of the timer in the units specified. *Returns* a double that repr
 vex::brain my_brain = vex::brain();
 my_brain.timer(vex::timeUnits::sec);  //Gets time in seconds
 ```
-______________________________________________________________________________________________________________________________________
+___
 
 ### resetTimer
 `vex::brain::resetTimer()`
@@ -42,7 +42,7 @@ vex::brain my_brain = vex::brain();
 vex::task::sleep(3000);  // Wait for 3 seconds
 my_brain.resetTimer();
 ```
-______________________________________________________________________________________________________________________________________
+___
 
 ### setTimer
 `vex::brain::setTimer(double value, timeUnits units)`
@@ -55,7 +55,7 @@ Sets the timer to a value and time unit.
 | Name | Value | Description |
 | :--- | :---- | :---------- |
 | value | double | The value that the timer is set to. |
-| units | vex::timeUnits TODO:link | The unit of time that will be returned. |
+| units | [vex::timeUnits](cpp/units?id=timeunits) | The unit of time that will be returned. |
 
 **Example** 
 ```clike
@@ -63,7 +63,7 @@ vex::brain my_brain = vex::brain();
 vex::task::sleep(3000);  // Wait for 3 seconds
 my_brain.setTimer(2, vex::timeUnits::sec);  //Set timer back to 2 seconds
 ```
-______________________________________________________________________________________________________________________________
+___
 
 
 ## TODO: Other methods
